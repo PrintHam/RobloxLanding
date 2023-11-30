@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass&family=Ubuntu&display=swap');
+
+:root{
+    /*Fonts*/
+    --font-size: 20px;
+    --overpass: 'Overpass', sans-serif;
+    --ubuntu: 'Ubuntu', sans-serif;
+
+    /*Colors*/
+    --light-red: hsl(356, 100%, 66%);
+    --very-light-red: hsl(355, 54%, 40%);
+    --very-dark-blue: hsl(208, 49%, 24%);
+    --white: hsl(0, 0%, 100%);
+    --grayish-blue: hsl(240, 2%, 79%);
+    --very-grayish-blue: hsl(207, 13%, 34%);
+    --very-dark-black-blue: hsl(240, 10%, 16%);
+
+    /*Gradients*/
+    --graident-nav-1: hsl(246, 60%, 49%);
+    --graident-nav-2: hsl(251, 60%, 52%);
+
+    --graident-background-1: hsl(237, 17%, 21%);
+    --graident-background-2:hsl(237, 23%, 32%);
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/*Header*/
+#header{
+    width: 100%;
+    min-width: 900px;
+    min-height: 600px;
+    border-bottom-left-radius: 10%;
+    background-image: linear-gradient(to right, var(--graident-nav-1), var(--graident-nav-2));
+}
+/*Nav*/
+#nav{
+    width: 100%;
+    min-width: 900px;
+    min-height: 300px;
+    color: var(--white);
+    font-family: var(--ubuntu);
+    font-size: var(--font-size);
+}
+.nav__flex_container{
+    padding-top: 2%;
+    display: flex;
+    justify-content: space-evenly;
+}
+/*Header Content*/
+#header-content{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#header-content h1{
+    color: var(--white);
+    font-size: 55px;
+    font-family: var(--overpass);
+}
+#header-content p{
+    color: var(--white);
+    font-size: var(--font-size);
+    font-family: var(--ubuntu);
+    font-weight: lighter;
+}
+.header-content__links{
+    padding-top: 50px;
+    display: flex;
+    list-style-type: none;
+}
+.header__item{
+    margin-right: 20px;
+    width: 125px;
+    height: 40px;
+}
+.header__link{
+    text-decoration: none;
+}
+.start-item{
+    background-color: #351371;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+}
+.start-item a{
+    font-family: var(--ubuntu);
+    color: white;
+}
+button:hover{
+    opacity: 0.5;
+}
+/*Header Content Selectors*/
+.start-item:hover, .learn-more-item:hover{
+    opacity: 0.5;
+}
+button{
+    background-color: #382f2f;
+    text-align: center;
+    border-radius: 10px;
+    border: transparent;
+    padding: 10px;
+    width: 200px;
+    color: white;
+    font-size: 16px;
+}
+/*Features*/
+#features{
+    background-color: var(--white);
+    width: 100%;
+    min-width: 900px;
+    height: 900px;
+}
+#features h1{
+    font-family: var(--ubuntu);
+    color: var(--very-dark-blue);
+}
+#features p{
+    line-height: 1.8;
+    font-family: var(--overpass);
+    font-size: var(--font-size);
+}
+.features__main-header{
+    padding-top: 3%;
+    text-align: center;
+    font-size: 45px;
+}
+.features__flex-container{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.features__descriptions{
+    padding-top: 5%;
+}
+.features__text{
+    font-size: var(--font-size);
+    padding-bottom: 15%;
+    max-width: 700px;
+}
+.features__text h1{
+    font-size: 32px;
+    padding-bottom: 5%;
+}
+.features__image-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*Advantages*/
+#advantages{
+    width: 100%;
+    min-width: 900px;
+    height: 500px;
+    background-image: linear-gradient(to right, var(--graident-nav-1), var(--graident-nav-2));
+    color: var(--white);
+    border-top-right-radius: 75px;
+    border-bottom-left-radius: 75px;
+    margin-top: 15rem;
+}
+.advantages__flex-container{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 7rem;
+}
+.advantages__content h1{
+    padding-bottom: 5%;
+    font-family: var(--overpass);
+    font-size: 33px;
+}
+.advantages__content p{
+    line-height: 1.8;
+    font-family: var(--ubuntu);
+    font-size: var(--font-size);
+    max-width: 700px;
+}
+.advantages__video_container iframe{
+    border-radius: 10px;
+}
+@media only screen and (max-width: 1500px){
+    #header p, #features p{
+        font-size: 25px;
+    }
+    #features{
+        height: 1500px;
+    }
+    #advantages{
+        height: 750px;
+    }
+    .features__flex-container{
+        flex-direction: column;
+    }
+    .features__descriptions, .features__image-container{
+        margin: 0 auto;
+    }
+    .advantages__flex-container{
+        width: fit-content;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .advantages__video_container{
+        margin: 0 auto;
+        width: fit-content;
+        height: fit-content;
+        padding-top: 2rem;
+    }
+    .advantages__image_container img{
+        padding-top: 5rem;
+        width: 500px;
+    }
+}
